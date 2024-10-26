@@ -319,7 +319,6 @@ By following this detailed schedule, you will be well-prepared to:
 
 **Good luck on your learning journey!**
 ====================================================================================================================================
-
 # Mastering Kubernetes Operators with Prometheus using Go
 
 ## Introduction
@@ -341,21 +340,124 @@ Welcome to the comprehensive study plan designed to help you master Kubernetes o
 
 Each week is structured to gradually introduce core concepts, split across focus areas, CKA topics, and Go programming skills. Below is the breakdown of each week, including specific date ranges and key goals.
 
-| Week | Date Range | Focus Areas | CKA Topics | Go Topics | Detailed Schedule |
-|------|------------|-------------|------------|-----------|-------------------|
-| 1    | October 21 - October 27 | Introduction to Kubernetes Operators and Prometheus | Kubernetes Fundamentals (Namespaces, Pods, Deployments) | Go Basics - Functions, Data Types, and Structures | - [ ] Day 1: Introduction to Kubernetes Operators. Overview of how Prometheus integrates with Kubernetes.<br>- [ ] Day 2-4: Review Kubernetes core concepts – focus on Namespaces, Pods, and Deployments (CKA topics).<br>- [ ] Day 5: Go fundamentals – basic syntax and data structures.<br>- [ ] Day 6-7: KillerCoda exercise on Kubernetes Pods and Deployments. |
-| 2    | October 28 - November 3 | Custom Resource Definitions (CRDs) | Workloads & Scheduling | Structs, Interfaces, and Methods | - [ ] Day 1-2: Deep dive into CRDs, understanding their purpose and how they enhance Kubernetes.<br>- [ ] Day 3: Workloads and Scheduling topics for CKA.<br>- [ ] Day 4-5: Go interfaces and methods.<br>- [ ] Day 6-7: KillerCoda scenario: Scheduling exercises. |
-| 3    | November 4 - November 10 | Operator SDK Introduction | Resource Scheduling and Managing Node Allocations | Error Handling and Concurrency | - [ ] Day 1-3: Install Operator SDK, learn basic scaffolding for operator development.<br>- [ ] Day 4: Resource scheduling using Kubernetes (CKA topics).<br>- [ ] Day 5: Error handling in Go.<br>- [ ] Day 6-7: Concurrency in Go - goroutines and channels. |
-| 4    | November 11 - November 17 | Create First Kubernetes Operator (Hello-World Operator) | Logging and Monitoring (basic Prometheus setup) | Testing in Go, creating simple unit tests | - [ ] Create Hello-World Operator.<br>- [ ] Set up Prometheus for logging and monitoring.<br>- [ ] Go: Create unit tests for basic functionality. |
-| 5    | November 18 - November 24 | Advanced Operator Concepts - Controllers and Reconciliation | Networking Fundamentals - Services, Endpoints, Ingress | Working with Modules and Packages | - [ ] Understand controller patterns and reconciliation loop.<br>- [ ] Study Kubernetes Networking (Services, Endpoints, Ingress).<br>- [ ] Go: Work with modules and packages. |
-| 6    | November 25 - December 1 | Prometheus Operator - Deployment and Configuration | Networking Policies | Creating REST APIs with Go | - [ ] Deploy and configure Prometheus Operator.<br>- [ ] Review Kubernetes Networking Policies.<br>- [ ] Go: Create simple REST APIs. |
-| 7    | December 2 - December 8 | Custom Metrics and Exporters for Prometheus | Storage and Persistent Volumes | Advanced HTTP handling in Go | - [ ] Create custom metrics in Prometheus.<br>- [ ] Learn about Kubernetes Storage and Persistent Volumes.<br>- [ ] Go: Advanced HTTP handling. |
-| 8    | December 9 - December 15 | Implementing Custom Resource Controllers | State Persistence, etcd overview | JSON handling, Go concurrency patterns | - [ ] Implement Custom Resource Controller.<br>- [ ] Study state persistence with etcd.<br>- [ ] Go: Practice JSON handling and concurrency patterns. |
-| 9    | December 16 - December 22 | Testing Kubernetes Operators | Troubleshooting Applications and Nodes | Mocking and Unit Testing in Go | - [ ] Develop test cases for Kubernetes operators.<br>- [ ] Practice troubleshooting Kubernetes nodes.<br>- [ ] Go: Mocking and unit testing exercises. |
-| 10   | December 23 - December 29 | Integration with Prometheus and Grafana Dashboards | Security Basics - RBAC and Secrets | Security Practices in Go | - [ ] Integrate Prometheus with Grafana.<br>- [ ] Study Kubernetes security (RBAC, Secrets).<br>- [ ] Go: Implement secure coding practices. |
-| 11   | December 30 - January 5 | Monitoring Kubernetes Operators using Prometheus | Cluster Maintenance and Upgrades | Dependency Injection, Middleware Design | - [ ] Monitor operators with Prometheus.<br>- [ ] Learn cluster maintenance and upgrade procedures.<br>- [ ] Go: Implement dependency injection and middleware. |
-| 12   | January 6 - January 12 | Scalability and Resilience for Operators | Backup and Restore, Disaster Recovery | Advanced Code Optimization Techniques | - [ ] Improve operator scalability and resilience.<br>- [ ] Study backup, restore, and disaster recovery procedures.<br>- [ ] Go: Advanced code optimizations. |
-| 13   | January 13 - January 19 | CKA Exam Preparation and Review | General Review | Final Project - Create a Kubernetes Operator integrating Prometheus | - [ ] Review all CKA topics.<br>- [ ] Complete final project: Kubernetes Operator integrating Prometheus. |
+#### Week 1: October 21 - October 27
+- **Focus Areas**: Introduction to Kubernetes Operators and Prometheus
+- **CKA Topics**: Kubernetes Fundamentals (Namespaces, Pods, Deployments)
+- **Go Topics**: Go Basics - Functions, Data Types, and Structures
+- **Detailed Schedule**:
+  - [ ] Day 1: Introduction to Kubernetes Operators. Overview of how Prometheus integrates with Kubernetes.
+  - [ ] Day 2-4: Review Kubernetes core concepts – focus on Namespaces, Pods, and Deployments (CKA topics).
+  - [ ] Day 5: Go fundamentals – basic syntax and data structures.
+  - [ ] Day 6-7: KillerCoda exercise on Kubernetes Pods and Deployments.
+
+#### Week 2: October 28 - November 3
+- **Focus Areas**: Custom Resource Definitions (CRDs)
+- **CKA Topics**: Workloads & Scheduling
+- **Go Topics**: Structs, Interfaces, and Methods
+- **Detailed Schedule**:
+  - [ ] Day 1-2: Deep dive into CRDs, understanding their purpose and how they enhance Kubernetes.
+  - [ ] Day 3: Workloads and Scheduling topics for CKA.
+  - [ ] Day 4-5: Go interfaces and methods.
+  - [ ] Day 6-7: KillerCoda scenario: Scheduling exercises.
+
+#### Week 3: November 4 - November 10
+- **Focus Areas**: Operator SDK Introduction
+- **CKA Topics**: Resource Scheduling and Managing Node Allocations
+- **Go Topics**: Error Handling and Concurrency
+- **Detailed Schedule**:
+  - [ ] Day 1-3: Install Operator SDK, learn basic scaffolding for operator development.
+  - [ ] Day 4: Resource scheduling using Kubernetes (CKA topics).
+  - [ ] Day 5: Error handling in Go.
+  - [ ] Day 6-7: Concurrency in Go - goroutines and channels.
+
+#### Week 4: November 11 - November 17
+- **Focus Areas**: Create First Kubernetes Operator (Hello-World Operator)
+- **CKA Topics**: Logging and Monitoring (basic Prometheus setup)
+- **Go Topics**: Testing in Go, creating simple unit tests
+- **Detailed Schedule**:
+  - [ ] Create Hello-World Operator.
+  - [ ] Set up Prometheus for logging and monitoring.
+  - [ ] Go: Create unit tests for basic functionality.
+
+#### Week 5: November 18 - November 24
+- **Focus Areas**: Advanced Operator Concepts - Controllers and Reconciliation
+- **CKA Topics**: Networking Fundamentals - Services, Endpoints, Ingress
+- **Go Topics**: Working with Modules and Packages
+- **Detailed Schedule**:
+  - [ ] Understand controller patterns and reconciliation loop.
+  - [ ] Study Kubernetes Networking (Services, Endpoints, Ingress).
+  - [ ] Go: Work with modules and packages.
+
+#### Week 6: November 25 - December 1
+- **Focus Areas**: Prometheus Operator - Deployment and Configuration
+- **CKA Topics**: Networking Policies
+- **Go Topics**: Creating REST APIs with Go
+- **Detailed Schedule**:
+  - [ ] Deploy and configure Prometheus Operator.
+  - [ ] Review Kubernetes Networking Policies.
+  - [ ] Go: Create simple REST APIs.
+
+#### Week 7: December 2 - December 8
+- **Focus Areas**: Custom Metrics and Exporters for Prometheus
+- **CKA Topics**: Storage and Persistent Volumes
+- **Go Topics**: Advanced HTTP handling in Go
+- **Detailed Schedule**:
+  - [ ] Create custom metrics in Prometheus.
+  - [ ] Learn about Kubernetes Storage and Persistent Volumes.
+  - [ ] Go: Advanced HTTP handling.
+
+#### Week 8: December 9 - December 15
+- **Focus Areas**: Implementing Custom Resource Controllers
+- **CKA Topics**: State Persistence, etcd overview
+- **Go Topics**: JSON handling, Go concurrency patterns
+- **Detailed Schedule**:
+  - [ ] Implement Custom Resource Controller.
+  - [ ] Study state persistence with etcd.
+  - [ ] Go: Practice JSON handling and concurrency patterns.
+
+#### Week 9: December 16 - December 22
+- **Focus Areas**: Testing Kubernetes Operators
+- **CKA Topics**: Troubleshooting Applications and Nodes
+- **Go Topics**: Mocking and Unit Testing in Go
+- **Detailed Schedule**:
+  - [ ] Develop test cases for Kubernetes operators.
+  - [ ] Practice troubleshooting Kubernetes nodes.
+  - [ ] Go: Mocking and unit testing exercises.
+
+#### Week 10: December 23 - December 29
+- **Focus Areas**: Integration with Prometheus and Grafana Dashboards
+- **CKA Topics**: Security Basics - RBAC and Secrets
+- **Go Topics**: Security Practices in Go
+- **Detailed Schedule**:
+  - [ ] Integrate Prometheus with Grafana.
+  - [ ] Study Kubernetes security (RBAC, Secrets).
+  - [ ] Go: Implement secure coding practices.
+
+#### Week 11: December 30 - January 5
+- **Focus Areas**: Monitoring Kubernetes Operators using Prometheus
+- **CKA Topics**: Cluster Maintenance and Upgrades
+- **Go Topics**: Dependency Injection, Middleware Design
+- **Detailed Schedule**:
+  - [ ] Monitor operators with Prometheus.
+  - [ ] Learn cluster maintenance and upgrade procedures.
+  - [ ] Go: Implement dependency injection and middleware.
+
+#### Week 12: January 6 - January 12
+- **Focus Areas**: Scalability and Resilience for Operators
+- **CKA Topics**: Backup and Restore, Disaster Recovery
+- **Go Topics**: Advanced Code Optimization Techniques
+- **Detailed Schedule**:
+  - [ ] Improve operator scalability and resilience.
+  - [ ] Study backup, restore, and disaster recovery procedures.
+  - [ ] Go: Advanced code optimizations.
+
+#### Week 13: January 13 - January 19
+- **Focus Areas**: CKA Exam Preparation and Review
+- **CKA Topics**: General Review
+- **Go Topics**: Final Project - Create a Kubernetes Operator integrating Prometheus
+- **Detailed Schedule**:
+  - [ ] Review all CKA topics.
+  - [ ] Complete final project: Kubernetes Operator integrating Prometheus.
 
 ## Detailed Daily Tasks
 - Each day, you will have a mix of reading, hands-on exercises, and development tasks.
@@ -381,4 +483,6 @@ Upon completing this study plan, you will:
 - The schedule is flexible, with rest days when needed.
 - Feel free to engage with the community, join relevant forums, and share your progress for mutual learning.
 - This journey requires consistent effort, so remember to take breaks, and celebrate small wins along the way!
+
+
 
