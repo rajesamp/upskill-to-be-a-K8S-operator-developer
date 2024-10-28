@@ -18,3 +18,6 @@
 │   └── kubernetes-cheatsheet.md
 └── study-plan.md
 ![image](https://github.com/user-attachments/assets/5cb6b9b5-a8d6-4c15-8e20-050cfa9d2553)
+
+
+![image](https://github.com/user-attachments/assets/edc918c7-1dd4-407e-9e4a-e0566fd0d140)
