@@ -1,0 +1,121 @@
+# Go fmt Package Format Specifiers Reference
+
+## General Format Verbs
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%v` | Default format | `fmt.Printf("%v", Person{"Bob", 20})` | `{Bob 20}` |
+| `%+v` | Struct field names included | `fmt.Printf("%+v", Person{"Bob", 20})` | `{Name:Bob Age:20}` |
+| `%#v` | Go-syntax format | `fmt.Printf("%#v", Person{"Bob", 20})` | `main.Person{Name:"Bob", Age:20}` |
+| `%T` | Type of value | `fmt.Printf("%T", Person{"Bob", 20})` | `main.Person` |
+| `%%` | Literal percent sign | `fmt.Printf("%%")` | `%` |
+
+## Integer Formats
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%b` | Binary | `fmt.Printf("%b", 42)` | `101010` |
+| `%c` | Character | `fmt.Printf("%c", 65)` | `A` |
+| `%d` | Decimal | `fmt.Printf("%d", 42)` | `42` |
+| `%o` | Octal | `fmt.Printf("%o", 42)` | `52` |
+| `%O` | Octal with 0o prefix | `fmt.Printf("%O", 42)` | `0o52` |
+| `%x` | Hexadecimal lowercase | `fmt.Printf("%x", 42)` | `2a` |
+| `%X` | Hexadecimal uppercase | `fmt.Printf("%X", 42)` | `2A` |
+| `%U` | Unicode format | `fmt.Printf("%U", 'A')` | `U+0041` |
+
+## String and Slice Formats
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%s` | Default string | `fmt.Printf("%s", "hello")` | `hello` |
+| `%q` | Quoted string | `fmt.Printf("%q", "hello")` | `"hello"` |
+| `%x` | Hex bytes lowercase | `fmt.Printf("%x", "hello")` | `68656c6c6f` |
+| `%X` | Hex bytes uppercase | `fmt.Printf("%X", "hello")` | `68656C6C6F` |
+
+## Floating Point Formats
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%e` | Scientific notation | `fmt.Printf("%e", 123.456)` | `1.234560e+02` |
+| `%E` | Scientific notation uppercase | `fmt.Printf("%E", 123.456)` | `1.234560E+02` |
+| `%f` | Decimal point, no exponent | `fmt.Printf("%f", 123.456)` | `123.456000` |
+| `%F` | Same as %f | `fmt.Printf("%F", 123.456)` | `123.456000` |
+| `%g` | %e for large exponents, %f otherwise | `fmt.Printf("%g", 123.456)` | `123.456` |
+| `%G` | Same as %g but uppercase | `fmt.Printf("%G", 123.456)` | `123.456` |
+
+## Boolean Format
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%t` | True or false | `fmt.Printf("%t", true)` | `true` |
+
+## Pointer Format
+
+| Verb | Description | Example | Output |
+|------|-------------|---------|---------|
+| `%p` | Pointer address | `fmt.Printf("%p", &struct{}{})` | `0xc000096000` |
+
+## Width and Precision
+
+| Format | Description | Example | Output |
+|--------|-------------|---------|---------|
+| `%f` | Default width, default precision | `fmt.Printf("%f", 123.456)` | `123.456000` |
+| `%9f` | Width 9, default precision | `fmt.Printf("%9f", 123.456)` | ` 123.456000` |
+| `%.2f` | Default width, precision 2 | `fmt.Printf("%.2f", 123.456)` | `123.46` |
+| `%9.2f` | Width 9, precision 2 | `fmt.Printf("%9.2f", 123.456)` | `   123.46` |
+| `%9.f` | Width 9, precision 0 | `fmt.Printf("%9.f", 123.456)` | `      123` |
+
+## Padding and Alignment
+
+| Format | Description | Example | Output |
+|--------|-------------|---------|---------|
+| `%05d` | Pad with zeros | `fmt.Printf("%05d", 42)` | `00042` |
+| `%-5d` | Left-justify | `fmt.Printf("%-5d", 42)` | `42   ` |
+| `%5d` | Right-justify | `fmt.Printf("%5d", 42)` | `   42` |
+| `% d` | Space for sign | `fmt.Printf("% d", 42)` | ` 42` |
+| `%+d` | Always print sign | `fmt.Printf("%+d", 42)` | `+42` |
+
+## Common Format Functions
+
+| Function | Description | Example | Output |
+|----------|-------------|---------|---------|
+| `Print` | Print arguments | `fmt.Print("Hello", 42)` | `Hello42` |
+| `Println` | Print with newline | `fmt.Println("Hello", 42)` | `Hello 42\n` |
+| `Printf` | Print formatted | `fmt.Printf("%s: %d", "Hello", 42)` | `Hello: 42` |
+| `Sprint` | Return as string | `s := fmt.Sprint("Hello", 42)` | `"Hello42"` |
+| `Sprintf` | Return formatted string | `s := fmt.Sprintf("%s: %d", "Hello", 42)` | `"Hello: 42"` |
+| `Errorf` | Return as error | `err := fmt.Errorf("error: %d", 42)` | `error: 42` |
+
+## Complete Example
+
+```go
+package main
+
+import "fmt"
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func main() {
+    p := Person{"Bob", 20}
+    
+    // Different ways to print the same struct
+    fmt.Printf("Default: %v\n", p)         // {Bob 20}
+    fmt.Printf("With fields: %+v\n", p)    // {Name:Bob Age:20}
+    fmt.Printf("Go syntax: %#v\n", p)      // main.Person{Name:"Bob", Age:20}
+    fmt.Printf("Type: %T\n", p)            // main.Person
+    
+    // Numbers and strings
+    fmt.Printf("Integer: %d\n", 42)        // 42
+    fmt.Printf("Float: %.2f\n", 42.123)    // 42.12
+    fmt.Printf("String: %s\n", "hello")    // hello
+    fmt.Printf("Quoted: %q\n", "hello")    // "hello"
+    
+    // Width and alignment
+    fmt.Printf("|%10s|\n", "hello")        // |     hello|
+    fmt.Printf("|%-10s|\n", "hello")       // |hello     |
+    fmt.Printf("|%010d|\n", 42)            // |0000000042|
+}
+```
